@@ -1,13 +1,19 @@
 const triageConfig = {
   statuses: {
-    Acknowledged: {
-      emoji: ':eyes:'
+    WorkingOnIt: {
+      emoji: ':working_on_it:'
+    },
+    LookingIntoIt: {
+      emoji: ':looking_into_it:'
+    },
+    LongTermFix: {
+      emoji: ':long_term_fix:'
+    },
+    ReadyToDeploy: {
+      emoji: ':ready_to_deploy:'
     },
     Done: {
-      emoji: ':white_check_mark:'
-    },
-    Accepted: {
-      emoji: ':thumbsup_all:'
+      emoji: ':done:'
     }
   },
   levels: {
@@ -26,7 +32,7 @@ const triageConfig = {
       expression: '0 * * * *',
       hours_to_look_back: 24,
       report_on_levels: ['Urgent', 'Medium'], // only report on messages with one of these levels ("OR" logic)
-      report_on_does_not_have_status: ['Acknowledged', 'Done'] // only report on messages that do not have either of these statuses ("OR")
+      report_on_does_not_have_status: ['Done'] // only report on messages that do not have either of these statuses ("OR")
     }
   ]
 }
