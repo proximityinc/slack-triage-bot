@@ -29,7 +29,7 @@ const triageConfig = {
   },
   scheduled_reminders: [
     {
-      expression: '0 * * * *',
+      expression: '0 9,15 * * *',
       hours_to_look_back: 24,
       report_on_levels: ['Urgent', 'Medium'], // only report on messages with one of these levels ("OR" logic)
       report_on_does_not_have_status: ['Done'] // only report on messages that do not have either of these statuses ("OR")
